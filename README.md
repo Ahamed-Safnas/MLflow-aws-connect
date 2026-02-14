@@ -60,7 +60,7 @@ pipenv shell
 aws configure
 
 #connect mlflow with s3
-mlflow server -h 0.0.0.0 --default-artifact-root s3://mlflow-tracking-buc25 --allowed-hosts "*"
+mlflow server -h 0.0.0.0 --default-artifact-root s3://mlflow-bucket-20000203 --allowed-hosts "*"
 
 #Set EC2 security 
 open Public IPv4 DNS to the port 5000

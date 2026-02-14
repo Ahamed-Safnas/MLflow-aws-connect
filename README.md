@@ -59,11 +59,11 @@ pipenv shell
 ## Then set aws credentials
 aws configure
 
+#connect mlflow with s3
+mlflow server -h 0.0.0.0 --default-artifact-root s3://mlflow-tracking-buc25 --allowed-hosts "*"
 
-#Finally 
-mlflow server -h 0.0.0.0 --default-artifact-root s3://mlflow-tracking-buc25 --allowed-hosts *
-
-#open Public IPv4 DNS to the port 5000
+#Set EC2 security 
+open Public IPv4 DNS to the port 5000
 
 
 #set uri in your local terminal and in your code 

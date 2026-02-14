@@ -5,7 +5,7 @@
 ## For Dagshub:
 
 MLFLOW_TRACKING_URI=https://dagshub.com/entbappy/MLflow-Basic-Demo.mlflow \
-MLFLOW_TRACKING_USERNAME=entbappy \
+MLFLOW_TRACKING_USERNAME=safnas \
 MLFLOW_TRACKING_PASSWORD=6824692c47a369aa6f9eac5b10041d5c8edbcef0 \
 python script.py
 
@@ -15,7 +15,7 @@ python script.py
 
 export MLFLOW_TRACKING_URI=https://dagshub.com/entbappy/MLflow-Basic-Demo.mlflow
 
-export MLFLOW_TRACKING_USERNAME=entbappy 
+export MLFLOW_TRACKING_USERNAME=safnas 
 
 export MLFLOW_TRACKING_PASSWORD=6824692c47a369aa6f9eac5b10041d5c8edbcef0
 
@@ -65,10 +65,11 @@ mlflow server -h 0.0.0.0 --default-artifact-root s3://mlflow-tracking-buc25 --al
 #Set EC2 security 
 open Public IPv4 DNS to the port 5000
 
+AWS -> EC2 -> Copy Public DNS
+---> Public DNS:Port Number  = ec2-13-50-111-248.eu-north-1.compute.amazonaws.com:5000
 
-#set uri in your local terminal and in your code 
-export MLFLOW_TRACKING_URI=http://ec2-54-147-36-34.compute-1.amazonaws.com:5000/
-```
+while searching it on browser use ---> http not https
+// http://ec2-13-50-111-248.eu-north-1.compute.amazonaws.com:5000
 
 
 

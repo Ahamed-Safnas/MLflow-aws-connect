@@ -60,7 +60,19 @@ pipenv shell
 aws configure
 
 #connect mlflow with s3
-mlflow server -h 0.0.0.0 --default-artifact-root s3://mlflow-bucket-20000203 --allowed-hosts "*"
+1. old one depricated
+# mlflow server -h 0.0.0.0 --default-artifact-root s3://mlflow-bucket-20000203 --allowed-hosts "*"
+
+2. compatible with new version 
+mlflow server \
+--host 0.0.0.0 \
+--port 5000 \
+--backend-store-uri sqlite:////home/ubuntu/mlflow/mlflow.db \
+--registry-store-uri sqlite:////home/ubuntu/mlflow/mlflow.db \
+--default-artifact-root s3://mlflow-bucket-20000203 \
+--serve-artifacts \
+--allowed-hosts "*" \
+--cors-allowed-origins "*"
 
 #Set EC2 security 
 open Public IPv4 DNS to the port 5000
